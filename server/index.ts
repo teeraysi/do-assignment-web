@@ -23,7 +23,6 @@ app.prepare().then(() => {
 
 
   server.all('*', (req, res) => {  
-    console.log("All");
     handle(req, res)
   });
 
@@ -33,7 +32,7 @@ app.prepare().then(() => {
     }
 
     // handle CSRF token errors here
-    res.status(403)
+    res.status(500)
     res.send('form tampered with')
   });
 

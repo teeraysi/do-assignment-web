@@ -1,0 +1,27 @@
+{
+  "presets": [
+    
+      [
+        "next/babel",
+        {
+          "preset-env": {},
+          "transform-runtime": {},
+          "styled-jsx": {},
+          "class-properties": {}
+        }
+      ],
+      "@zeit/next-typescript/babel"
+    
+  ],
+  "plugins": [
+    [
+      "module-resolver", 
+      {
+        "root": ["."],
+        "alias": {
+          "src": "./src"
+        }
+      }
+    ]
+  ]
+}

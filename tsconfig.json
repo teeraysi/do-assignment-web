@@ -29,38 +29,13 @@
       "typeRoots": [
           "./node_modules/@types"
       ],
-      "paths": {
-          "i18n": [
-              "./i18n.ts"
-          ],
-          "api/*": [
-              "./src/api/*"
-          ],
+      "paths": {        
           "definitions/*": [
               "./src/definitions/*"
-          ],
-          "common/*": [
-              "./src/common/*"
-          ],
-          "models/*": [
-              "./src/models/*"
-          ],
-          "modules/*": [
-              "./src/modules/*"
-          ],
-          "stores": [
-              "./src/store/index.ts"
-          ],
-          "store/*": [
-              "./src/store/*"
-          ],
-          "utils/*": [
-              "./src/utils/*"
-          ]
+          ]          
       }
   },
-  "includes": [
-      "./src/definitions/externals.d.ts",
+  "includes": [      
       "next-env.d.ts"
   ]
 }
