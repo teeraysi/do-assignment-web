@@ -1,19 +1,33 @@
 import React from 'react';
-import { Button, Tooltip } from 'reactstrap'
+import { Button, Tooltip, Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavLink, NavItem } from 'reactstrap'
+
+import Layout from '../src/components/layout'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export class IndexPage extends React.Component{
+
+interface IState {
+
+}
+
+export class IndexPage extends React.Component<{}, IState>{
+
+  constructor(props) {
+    super(props);
+
+  }
+
+
   render() {
+
+
+
     return (
-      <div>
-        <p>
-        This is a <a href="#" id="TooltipExample">tooltip</a> example.
-        <Tooltip target="TooltipExample">
-          <div>Content</div>>
-        </Tooltip>
-      </p>
-      <Button color="primary">Test</Button>
-      </div>
+      <Layout>
+        <div>
+          Home
+        </div>
+      </Layout>
       
     );
   }

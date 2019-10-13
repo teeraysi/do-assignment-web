@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as bodyParser from 'body-parser';
 import app from './nextapp';
 
-const port = 3000;
+const port = 7000;
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
