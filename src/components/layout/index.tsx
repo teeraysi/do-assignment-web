@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link'
 import { Button, Tooltip, Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavLink, NavItem, 
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
   Container, Row, Col } from 'reactstrap'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.less';
 
@@ -31,8 +36,8 @@ export class IndexPage extends React.Component<{}, IState>{
 
     return (
       <React.Fragment>
-        <Navbar color='light' light expand="md">
-          <NavbarBrand href="#">SCG Assignment</NavbarBrand>
+        <Navbar color='secondary' dark expand="md">
+          <NavbarBrand href="/">SCG Assignment</NavbarBrand>
           <NavbarToggler onClick={this.toggle.bind(this)} />
           <Collapse isOpen={this.state.isNavbarOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -41,6 +46,30 @@ export class IndexPage extends React.Component<{}, IState>{
                 <NavLink href="/">Home</NavLink>
                 </Link>
               </NavItem>
+              <UncontrolledDropdown nav inNavbar color='secondary'>
+                <DropdownToggle nav caret>
+                  Assignment
+                </DropdownToggle>
+                <DropdownMenu right color='dark'>
+
+                  <Link href='/find-xyz'>
+                    <DropdownItem>
+                      Find XYZ
+                    </DropdownItem>
+                  </Link>
+
+                  <Link href='/resturant'>
+                    <DropdownItem>
+                      Resturant
+                    </DropdownItem>
+                  </Link>
+                  
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Line Messaging
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               <NavItem>
                 <Link href="/about">
                   <NavLink href="/about">About</NavLink>
@@ -54,15 +83,17 @@ export class IndexPage extends React.Component<{}, IState>{
 
         <footer id="footer">
           <Container>
-            <Row>
-              <Col sm={4}>Pages</Col>
+            {/* <Row>
+              <Col sm={4}>Assignments</Col>
               <Col sm={4}></Col>
               <Col sm={4}>About</Col>
               
               
-            </Row>
+            </Row> */}
             <Row>
-              <Col size={12}>Copyright (c) 2019</Col>
+              <Col size={12}>
+                <div style={{textAlign: 'center'}}>Copyright (c) 2019</div>
+              </Col>
             </Row>
             </Container>
             

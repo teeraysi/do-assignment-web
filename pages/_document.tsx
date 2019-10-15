@@ -25,7 +25,7 @@ export default class extends Document {
           <meta httpEquiv="content-language" content="th, en" />
           <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
           <link href="https://fonts.googleapis.com/css?family=Kanit|Prompt|Roboto&display=swap" rel="stylesheet"></link>
-          <style type='text/css' dangerouslySetInnerHTML={{__html: globalStyles}} />
+          <style type='text/css' dangerouslySetInnerHTML={{__html: globalStyles}} />          
 
         </Head>
         <body>
