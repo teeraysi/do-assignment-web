@@ -13,7 +13,7 @@ class SCGApi {
     return apiResult.data;
   }
 
-  public async searchResturant(keyword: string): Promise<AjaxResult> {
+  public async searchResturant(keyword: string): Promise<any> {
     const url = config.api + '/scg/restuarant';
     const apiResult = await axios.post(url, { keyword: keyword });
     return apiResult.data;
