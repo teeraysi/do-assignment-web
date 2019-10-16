@@ -25,6 +25,7 @@ export class FindXYZComponent extends React.Component<{}, IState> {
     e.preventDefault();
 
     const result = await scgApi.findXYZ();
+    console.log(result);
     this.setState({ answerList: result.data });
   }
 
@@ -33,7 +34,7 @@ export class FindXYZComponent extends React.Component<{}, IState> {
       <Container>
         <Row>
           <Col>
-            <h5>Assignment: Find XYZ Component</h5>                  
+            <h5>X, 5, 9, 15, 23, Y, Z - Please finding X, Y, Z value</h5>                  
           </Col>        
         </Row>
         <Row>

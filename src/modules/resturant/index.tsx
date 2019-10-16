@@ -57,14 +57,15 @@ export class ResturantComponent extends React.Component<{}, IState> {
   render() {
     return (
       <Container>
-        <h5>Resturant Component</h5>
+        <h5>Finding all resturants in Bangsue area</h5>
 
         <Row>
           <Col>
             <Button color='primary' onClick={this.onClick_GetAnswer.bind(this)}>Get Answer</Button>
           </Col>
         </Row>
-        <Row>
+        
+        <Row style={{paddingTop: '20px'}}>
           {this.generateCards()}
         </Row>
       </Container>
