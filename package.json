@@ -33,6 +33,7 @@
     "mobx": "^5.14.0",
     "mobx-react": "^6.1.4",
     "next": "8.1.0",
+    "next-nprogress": "^1.4.0",
     "nodemon": "1.19.3",
     "react": "16.10.2",
     "react-dom": "16.10.2",

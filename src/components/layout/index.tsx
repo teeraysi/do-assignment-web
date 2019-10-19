@@ -58,16 +58,19 @@ export class IndexPage extends React.Component<{}, IState>{
                     </DropdownItem>
                   </Link>
 
-                  <Link href='/resturant'>
+                  <Link href='/restaurant'>
                     <DropdownItem>
-                      Resturant
+                      Restaurant
                     </DropdownItem>
                   </Link>
                   
                   <DropdownItem divider />
-                  <DropdownItem>
-                    Line Messaging
-                  </DropdownItem>
+
+                  <Link href='/line'>
+                    <DropdownItem>
+                      Line Messaging
+                    </DropdownItem>
+                    </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
@@ -82,17 +85,10 @@ export class IndexPage extends React.Component<{}, IState>{
         {this.props.children}
 
         <footer id="footer">
-          <Container>
-            {/* <Row>
-              <Col sm={4}>Assignments</Col>
-              <Col sm={4}></Col>
-              <Col sm={4}>About</Col>
-              
-              
-            </Row> */}
+          <Container>            
             <Row>
               <Col size={12}>
-                <div style={{textAlign: 'center'}}>Copyright (c) 2019</div>
+                <div style={{textAlign: 'center'}}>Mr.Teerayut Sinlan  :: Copyright (c) 2019</div>
               </Col>
             </Row>
             </Container>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../src/components/layout';
 
-import PageComponent from '../src/modules/resturant';
+import PageComponent from '../src/modules/restaurant';
 
 export class FindXYZPage extends React.Component {
   render() {

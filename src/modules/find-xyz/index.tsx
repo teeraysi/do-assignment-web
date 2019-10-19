@@ -9,6 +9,7 @@ import AnswerList from './components/answerList';
 
 interface IState {
   answerList: any[];
+  showResult: boolean;
 }
 
 export class FindXYZComponent extends React.Component<{}, IState> {
@@ -17,7 +18,8 @@ export class FindXYZComponent extends React.Component<{}, IState> {
     super(props);
 
     this.state = {
-      answerList: []
+      answerList: [],
+      showResult: false
     }
   }
 
@@ -26,29 +28,34 @@ export class FindXYZComponent extends React.Component<{}, IState> {
 
     const result = await scgApi.findXYZ();
     console.log(result);
-    this.setState({ answerList: result.data });
+    this.setState({ 
+      answerList: result.data ,
+      showResult: true
+    });
+  }
+
+  async clear(e) {
+    e.preventDefault();
+
+    this.setState({showResult: false});
   }
 
   render() {
     return (
       <Container>
-        <Row>
+        <Row style={{paddingTop: '20px'}}>
           <Col>
             <h5>X, 5, 9, 15, 23, Y, Z - Please finding X, Y, Z value</h5>                  
-          </Col>        
+          </Col>
         </Row>
         <Row>
           <Col>
-            <Button color='primary' onClick={this.answerOnClick.bind(this)}>Answer</Button>
+            <Button color='primary' onClick={this.answerOnClick.bind(this)}>Get Answer</Button>
+            &nbsp;&nbsp;
+            <Button color='danger' onClick={this.clear.bind(this)}>Clear</Button>
             <br />
             <br />
-            <AnswerList dataList={this.state.answerList} />
-
-            {/* <ul>
-              <li>X = 3</li>
-              <li>X = 3</li>
-              <li>X = 3</li>
-            </ul> */}
+            {this.state.showResult && <AnswerList dataList={this.state.answerList} />}
           </Col>
         </Row>
       </Container>
